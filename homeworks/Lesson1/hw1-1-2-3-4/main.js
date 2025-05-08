@@ -1,3 +1,4 @@
+//task 1-1 #dYQNrBV//
 {
     let hello = 'hello';
     let owu = 'owu';
@@ -26,7 +27,7 @@
     console.log(d);
     console.log(f);
 }
-//task 1-1//
+//task 1-2 #6Qb97gsv//
 {
     let fistName = 'Ihor';
     let midleName = 'Arseniuk';
@@ -34,7 +35,7 @@
     let person = `${fistName} ${midleName} ${lastName}`;
     console.log(person);
 }
-//task 1-2//
+//task 1-3 #4N0y5tufA//
 {
     let a = 100;
     let b = '100';
@@ -43,7 +44,7 @@
     console.log(typeof b);
     console.log(typeof c);
 }
-//task 1-3//
+//task 1-4 #ruUtWDUI//
 {
     let name = prompt('What is your name?', 'Ihor');
     let lastName = prompt('What is your last name?', 'Ivanovich');
@@ -51,4 +52,4 @@
     let person = `${name} ${lastName} ${age}`;
     console.log(person);
 }
-//task 1-4//
+
