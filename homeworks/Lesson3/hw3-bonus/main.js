@@ -56,6 +56,17 @@
     //    }
     //}
 
-    
-
+ // 8 c.reverse()
+ //   console.log(c)
+  // 9 for( let i=0;i<c.length;i++){
+  //      if(c[i]%3===0){
+  //          c[i]='okten';
+  //      }else if(c[i]%2===0){
+  //          console.log(c[i])
+  //      }else if(c[i]%2!==0){
+  //          console.log(c[i])
+  //      }
+  //      console.log(c)
+  //  }
 }
+// task #yHAwJOyiC //сссссссл
