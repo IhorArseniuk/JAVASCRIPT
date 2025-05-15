@@ -141,9 +141,9 @@
 // task #mDMWMW5a //
     console.log('');
   //  for (let arrayElement =0; arrayElement<10;arrayElement+=1) {
-  //      let nomber = array[arrayElement];
-  //          console.log(nomber);
-  //          document.write(`<h1>${arrayElement} - ${[nomber]}</h1>`);
+  //      let number = array[arrayElement];
+  //          console.log(number);
+  //          document.write(`<h1>${arrayElement} - ${[number]}</h1>`);
   //  }
 // task #4sXhaa5YMM //
    // for (let arrayElement=0; arrayElement<100;arrayElement+=1){
@@ -173,6 +173,30 @@
 {
     let books=[
         { title: 'Persi Jackson', pages: 123, authors:[{name:'Joane',age:67},{name:'Jane',age:78}], ganres:['fantasy']},
-        {title:'Green Mile', pages:265,authors:{name:Stiwen }}
-    ]
+        {title:'Green Mile', pages:265,authors:{name:'Stewart',age:23 },ganres:['drama','realism']},
+        {title:'Odisea', pages:90, authors:[{name:'Gomer',age:56},{name:'Ofelio',age:70}], ganres:['drama','myth','epic']},
+        {title:'50 Days', pages:150,authors:[{name:'Tiodoro',age:43}],ganres:['surviving','realism']},
+        {title:'Merry Popins', pages:324,authors:[{name:'Nicolle',age:33},{name:'Marry',age:53},{name:'Anna',age:89}],ganres:['drama','fantastic',]}]
+    let ganresmax=0;
+    let bookWitchMaxGanres=null;
+    for(let i of books){
+        let book=i;
+       let ganresCoun=book.ganres.length;
+      if(ganresCoun>ganresmax){
+        ganresmax=ganresCoun;
+        bookWitchMaxGanres=book
+      }
+
+    }
+    console.log(bookWitchMaxGanres);
+    let bigBook=0;
+    let biggestBook=null;
+    for (let i of books){
+        let bookWeight=i.length;
+        if(bookWeight>bigBook){
+            bigBook=bookWeight;
+            biggestBook=i;
+        }
+    }
+    console.log(biggestBook);
 }
