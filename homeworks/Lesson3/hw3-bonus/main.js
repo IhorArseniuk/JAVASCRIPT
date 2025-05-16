@@ -175,7 +175,7 @@
         { title: 'Persi Jackson', pages: 123, authors:[{name:'Joane',age:67},{name:'Jane',age:78}], ganres:['fantasy']},
         {title:'Green Mile', pages:265,authors:{name:'Stewart',age:23 },ganres:['drama','realism']},
         {title:'Odisea', pages:90, authors:[{name:'Gomer',age:56},{name:'Ofelio',age:70}], ganres:['drama','myth','epic']},
-        {title:'50 Days', pages:150,authors:[{name:'Tiodoro',age:43}],ganres:['surviving','realism']},
+        {title:'50 Days', pages:550,authors:[{name:'Tiodoro',age:43}],ganres:['surviving','realism']},
         {title:'Merry Popins', pages:324,authors:[{name:'Nicolle',age:33},{name:'Marry',age:53},{name:'Anna',age:89}],ganres:['drama','fantastic',]}]
     let ganresmax=0;
     let bookWitchMaxGanres=null;
@@ -189,14 +189,58 @@
 
     }
     console.log(bookWitchMaxGanres);
+    console.log('');
     let bigBook=0;
     let biggestBook=null;
     for (let i of books){
-        let bookWeight=i.length;
-        if(bookWeight>bigBook){
-            bigBook=bookWeight;
-            biggestBook=i;
+        let book= i;
+        let bookCount=book.pages;
+        if(bookCount>bigBook){
+            bigBook=bookCount;
+            biggestBook=book;
         }
     }
-    console.log(biggestBook);
+    console.log(biggestBook)
+    console.log('');
+    let bookWitchMaxAuthors=null;
+    for(let i of books){
+        let book=i;
+        let authorsCurent=book.authors.length;
+        if(authorsCurent>=2){
+            bookWitchMaxAuthors=book}}
+            console.log(bookWitchMaxAuthors)
+console.log('');
+    let longestTitle = '';
+    let bookWithLongestTitle = null;
+    for (let book of books)
+    { let titleCount= book.title.length;
+        if (titleCount > longestTitle) { longestTitle = titleCount;
+            bookWithLongestTitle = book; } }
+    console.log( bookWithLongestTitle);
+    console.log('');
+    let bookWitchOneAuthor=null;
+    for(let i of books){
+        let book=i;
+        if(book.authors.length===1){
+            bookWitchOneAuthor=book;
+        }
+    }
+    console.log(bookWitchOneAuthor);
+}
+// task //
+{
+let empty=[]
+//for(let i=0;i<50;i++){
+//    if(i%2===0){
+//        empty.push(i);
+//    }
+//}
+//console.log(empty);
+    for(let i=0;i<50;i++){
+        if(i%2!==0){
+            empty.push(i);
+        }
+    }
+    console.log(empty);
+
 }
