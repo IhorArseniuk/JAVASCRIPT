@@ -49,12 +49,12 @@
    //     }
    //     i++;
    // }
-    //7for(let i=0;i<c.length;i++){
-    //    if(i % 3===0){
-    //        c[i]='okten';
-    //        console.log(i,c[i])
-    //    }
-    //}
+  //7  for(let i=0;i<c.length;i++){
+  //      if(i % 3===0){
+  //          c[i]='okten';
+  //      }
+  //  }
+  //  console.log(c)
 
  // 8 c.reverse()
  //   console.log(c)
@@ -214,7 +214,8 @@ console.log('');
     let bookWithLongestTitle = null;
     for (let book of books)
     { let titleCount= book.title.length;
-        if (titleCount > longestTitle) { longestTitle = titleCount;
+        if (titleCount > longestTitle)
+        { longestTitle = titleCount;
             bookWithLongestTitle = book; } }
     console.log( bookWithLongestTitle);
     console.log('');
@@ -229,18 +230,66 @@ console.log('');
 }
 // task //
 {
-let empty=[]
+let empty=[];
 //for(let i=0;i<50;i++){
 //    if(i%2===0){
 //        empty.push(i);
 //    }
 //}
 //console.log(empty);
-    for(let i=0;i<50;i++){
-        if(i%2!==0){
-            empty.push(i);
+//    for(let i=0;i<50;i++){
+//        if(i%2!==0){
+//            empty.push(i);
+//        }
+//    }
+    //for(let i=0;i<20;i++){
+    //    let randomNumber=Math.floor(Math.random()*100);
+    //    empty.push(randomNumber);
+    //}
+  //  for(let i=0;i<20;i+=3){
+  //      let randomNumber=Math.floor(Math.random()*732)+8;
+  //      empty.push(randomNumber);
+  //  }
+    let newEmpty=[1,4,7,8,10,14,5,9,12,7,1,4 ];
+//    for(let i=0;i<50;i+=3){
+//        let randomNum =Math.floor(Math.random()*732);
+//        if(randomNum%2===0){
+//            empty.push(randomNum);
+//        }
+//    }
+//    newEmpty.push(empty)
+
+    for(let i=0;i<newEmpty.length;i++){
+        if(newEmpty[i+1] % 2===0){
+            console.log(newEmpty[i]);
         }
     }
-    console.log(empty);
+    console.log('');
+    let priceSum=0;
+    let priceArray =[100,250,50,168,120,345,188];
+    for(let i=0;i<priceArray.length;i++){
+        priceSum+=priceArray[i];
+}
+let priceMidl=priceSum/priceArray.length;
+    console.log(priceMidl)
 
+    console.log('');
+
+    let numbArray =[12,24,34,42,53,61,79,82,93,10, 40,50,80];
+    let newNumb=[];
+    for (let i=0; i<numbArray.length;i++){
+        let xFiveValue=numbArray[i]*5;
+        newNumb.push(xFiveValue);
+    }
+    console.log(newNumb);
+    console.log('');
+
+    let newMixedArray=[12,67,90, 'gighouo', true, 'jodpoi', 0, 'figipo', false, 129];
+    let secondMixedArray=[];
+    for(let i=0;i<newMixedArray.length;i++){
+        if(typeof newMixedArray[i]=== 'number'){
+            secondMixedArray.push(newMixedArray[i])
+        }
+    }
+    console.log(secondMixedArray);
 }
