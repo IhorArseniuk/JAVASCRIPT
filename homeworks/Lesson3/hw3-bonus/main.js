@@ -295,6 +295,7 @@ let priceMidl=priceSum/priceArray.length;
 }
 // task //
 {
+    console.log('');
     let usersWithId = [
         {id: 1, name: 'vasya', age: 31, status: false,},
         {id: 2, name: 'petya', age: 30, status: true,},
@@ -308,10 +309,66 @@ let priceMidl=priceSum/priceArray.length;
         {user_id: 2, country: 'Poland', city: 'Krakow'},
         {user_id: 4, country: 'USA', city: 'Miami'}
     ];
-    for(let i=1;i<usersWithId.length;i++){
+    let usersWitchCities=[];
+    for(let i=0;i<usersWithId.length;i++){
         let user=usersWithId[i];
-        user[user.address]=citiesWithId[u].country, citiesWithId[i.id-1].city;
+      for(let j=0;j<citiesWithId.length;j++){
+          let city=citiesWithId[j];
+          if(user.id===city.user_id){
+              user.address={
+                  country:city.country,
+                  city:city.city,
+              }
+          }
+      }
+      usersWitchCities.push(user);
     }
     console.log(usersWithId);
-    let usersWitchCities=[]
+
 }
+// task //
+{
+    console.log('');
+    let enyNumbers=[12,23,45,67,89,100,111,123,145,200];
+    for(let i=0;i<enyNumbers.length;i++){
+        if(enyNumbers[i]%2===0){
+            console.log(enyNumbers[i]);
+        }
+    }
+}
+// task //
+{
+    console.log('');
+    let numbers=[2,23,25,67,84,190,101,123,149,200];
+    let newNumbers=[];
+    for(let i=0;i<numbers.length;i++){
+              newNumbers.push(numbers[i]);
+    }
+    console.log(newNumbers);
+}
+// task //
+{
+    console.log('');
+    let letters=[ 'a', 'b', 'c'];
+    let word='';
+    //for(let i=0;i<letters.length;i++){
+    //    word+=letters[i];
+    //}
+    //letters=word;
+    //console.log(letters);
+   // let i=0;
+   //while(i<letters.length){
+   //    word+=letters[i];
+   //    i++;
+   //}
+   //letters=word;
+   //console.log(letters);
+    for(let i of letters){
+        word+=i;
+    }
+    letters=word;
+    console.log(letters);
+}
+
+
+
