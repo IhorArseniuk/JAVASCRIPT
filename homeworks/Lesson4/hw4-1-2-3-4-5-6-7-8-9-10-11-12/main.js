@@ -50,14 +50,22 @@ let cylinder  = Scylinder(45, 80)
 }
 // task 4-6 #hOL6126 //
 {
-    function writer (){
+   /* function writer (){
         return document.write(`<ul>
                                  <li>${arguments[0]}</li>
                                  <li>${arguments[1]}</li>
                                  <li>${arguments[2]}</li>
                               </ul>`)
     }
-    let text =writer('one', 'two', 'three');
+    let text =writer('one', 'two', 'three');*/
+    function writer (text){
+        return document.write(`<ul>
+                                 <li>${text}</li>
+                                 <li>${text}</li>
+                                 <li>${text}</li>
+                              </ul>`)
+    }
+    let text =writer('one');
 }
 // task 4-7 #0Kxco1edSN //
 {
