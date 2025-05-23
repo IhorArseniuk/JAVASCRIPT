@@ -62,13 +62,13 @@ listCreatorAndShower(5,'FAFA')
 }
 // task 5-8 #gEFoxMMO //
 {
-    let arrayBuilder=(array,item)=>{
+    let arrayBuilder=(array,item)=>{document.write(`<ul>`);
         if(item<array.length){
             document.write(`<li>${array[item]}</li>`)
             item++;
             arrayBuilder(array,item);
         }
-    }
+    document.write(`</ul>`);}
     arrayBuilder([1,2,true, 'roma', 'gigo',8,10, 'mayo','sriracha'],0);
 }
 // task 5-9 #bovDJDTIjt //
