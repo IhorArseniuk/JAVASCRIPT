@@ -15,15 +15,26 @@
 // task 6-2 #8lld9HMxXWB //
 {
     console.log('');
-    console.log('task 6-2');
     let strings=['hello okten', 'lorem ipsum','javascript is cool'];
     for(let string of strings){
         console.log(string.toUpperCase())
     }
-    debugger;
+
      function toUpperCasez(string, toUpperCase){
         return toUpperCase(string)
      }
     toUpperCasez(strings,(string)=>{for(let i of string){console.log(i.toUpperCase())}})
 }
 // task 6-3 #ClDsAm7xba7 //
+{
+    console.log('');
+    let strings=['HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'];
+    for(let string of strings){
+        console.log(string.toLowerCase())
+    }
+
+    function toLowerCasez(string, toLowerCase){
+        return toLowerCase(string)
+    }
+    toLowerCasez(strings,(string)=>{for(let i of string){console.log(i.toLowerCase())}})
+}
