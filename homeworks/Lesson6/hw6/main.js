@@ -205,8 +205,8 @@ console.log('');
                 {  cardSuit:suit, value: 'ace', color: color}]
             cardsHolder.push(...suits)}
     cards('heart',);
-    cards('diamond');
     cards('spade');
+    cards('diamond');
     cards('club');
     console.log(cardsHolder);
     console.log(cardsHolder.find((item)=>{return item.cardSuit==='spade'&& item.value==='ace';}));
