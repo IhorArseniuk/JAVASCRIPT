@@ -195,4 +195,6 @@ console.log('')
 
     let prince= new Prince('Alladin',24,38);
     prince.findCinderella(girls)
+    console.log('')
+    console.log(girls.find(Cinderella=>Cinderella.footSize===38))
 }
