@@ -86,19 +86,113 @@ console.log('')
 }
 // task 7-6 #vV9a6584I5 //
 {
+    console.log('')
     function Car(model,brand ,yearOfManufacturer,maxSpeed, engineCapacity) {
         this.model = model;
         this.brand = brand;
         this.yearOfManufacturer = yearOfManufacturer;
         this.maxSpeed = maxSpeed;
         this.engineCapacity = engineCapacity;
+        this.drive = function (){
+            return`Їдемо зі швидкістю ${this.maxSpeed}`};
+       /* this.info = function(){
+            let info =  new Map
+            info.set('Model ',this.model);
+            info.set('Brand',this.brand);
+            info.set('Year of Manufacturer', this.yearOfManufacturer);
+            info.set('Max speed',this.maxSpeed);
+            info.set('engine capacity', this.engineCapacity);
+            return Array.from(info)
+        }*/
+        this.info= function(){
+             for(const item in this){
+                console.log(item, this[item]);
+            }} ;
+        this.increaseMaxSpeed=function(newSpeed){
+            if(newSpeed>0) return this.maxSpeed= newSpeed + this.maxSpeed};
+        this.changeYear=function(newYear){
+            if(newYear>1850)return this.yearOfManufacturer=newYear;
+        };
+        this.addDriver=function (driver) {
+           return this.driver = driver};
     }
-        function drive(car){
-            console.log(`Їдемо зі швидкістю ${car.maxSpeed}`)
-        }
-
     let car1= new Car('prius','BMW',2008,250,300);
-    console.log(car1);
-    console.log(drive(car1));
 
+    car1.drive();
+    car1.info();
+    car1.increaseMaxSpeed(300);
+    car1.changeYear(1980);
+    car1.addDriver('Vito');
+    console.log(car1);
+}
+// task 7-7 #5kla3yMpgp //
+{
+    console.log('');
+    class CarBuilder{
+        constructor(model, producer, year, maxSpeed, engineVolume){
+            this.model=model;
+            this.producer=producer;
+            this.year=year;
+            this.maxSpeed=maxSpeed;
+            this.engineVolume=engineVolume;
+        }
+        drive= function(){return `Їдемо зі швидкістю ${this.maxSpeed}`};
+        info=function(){
+            for(const item in this){
+              console.log(  item, this[item]);
+            }
+        }
+        increaseMaxSpeed=function(speedToIncrease){
+            if(speedToIncrease>0){return this.maxSpeed= speedToIncrease + this.maxSpeed;}
+        };
+        changYear=function(newYear){if(newYear>1900){return this.year=newYear}};
+        addDriver=function(driver){
+           if(driver){ return this.driver=driver};
+        }
+    };
+    let auto=new CarBuilder('Hillix','TOYOTA',2012,320,400);
+    console.log(auto.drive());
+    auto.info();
+    auto.increaseMaxSpeed(111);
+    auto.changYear(2016);
+    auto.addDriver(  'Anton');
+    console.log(auto);
+}
+// task 7-8 #zg6Fifnqig //
+{
+
+    function Cinderella (name,age,footSize){
+        this.name=name;
+        this.age=age;
+        this.footSize=footSize;
+    }
+    let girls=[
+        new Cinderella('Elizabet',15,35),
+        new Cinderella('Mary',40,42),
+        new Cinderella('Anna',23,37),
+        new Cinderella('Sindy',33,39),
+        new Cinderella('Victoria',21,36),
+        new Cinderella('Luiza',52,34),
+        new Cinderella('Margot',27,41),
+        new Cinderella('Alina',18,37),
+        new Cinderella('Jasmine',25,38),
+        new Cinderella('Maria',31,43),
+    ]
+    class Prince{
+        constructor(name,age,shoe){
+            this.name=name;
+            this.age=age;
+            this.shoe=shoe;
+        }
+        findCinderella(array){
+            for(let item of array){
+                for(let i in item){
+                if(item[i]===this.shoe){ console.log(item)}
+                }
+            }
+        }
+    }
+
+    let prince= new Prince('Alladin',24,38);
+    prince.findCinderella(girls)
 }
