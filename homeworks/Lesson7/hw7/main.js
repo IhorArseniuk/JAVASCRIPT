@@ -218,3 +218,13 @@ Array.prototype.ownfilter=function(callback){
     };
 let filtred=users3.ownfilter(function (n) {return n.id%2===0})
 console.log(filtred);
+
+Array.prototype.myForEach=function(callback){
+    const result=[];
+    for(let i=0;i<this.length;i++){
+        if(callback(this[i],i,this)){result.push(this[i])}
+    }
+    return result
+};
+let userNames=users3.myForEach(function(n){ console.log( n.name.toUpperCase())})
+
