@@ -216,7 +216,7 @@ Array.prototype.ownfilter=function(callback){
     }
     return result;
     };
-let filtred=users3.ownfilter(function (n) {return n.id%2===0})
+let filtred=users3.ownfilter(function (n) {return n.id%2===0})//(n=>  n.id%2===0)
 console.log(filtred);
 
 Array.prototype.myForEach=function(callback){
