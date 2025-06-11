@@ -30,12 +30,7 @@
            return copy;
        }else return 'try again'
     }
-    const user=copyDeep({
-        name:'Brian',
-        age:40,
-        nationality:'Ukrainian',
-        greeting(){console.log `Hello`}
-    })
+    const user=copyDeep({name:'Brian', age:40, nationality:'Ukrainian', greeting(){console.log `Hello`}})
    console.log(user);
 
 
