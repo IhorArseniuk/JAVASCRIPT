@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.wrap{}
+.collapse{
+    font-size:20px
+}
+.alpha{
+    background-color: red;
+}
+.beta{
+    color:gold;
+}
+.exclusive{
+    background-color: green;
+    margin-top:50px;
+}
+.courses-container{
+    display:flex;
+    width: 100vw;
+    height: 500px;
+    gap:50px;
+    grid-auto-columns: auto ;
+    justify-content:space-around;
+    grid-template-rows:1fr auto;
+}
+.course{
+    width:250px;
+    height: 200px;
+    background: #5656d3;
+    padding:20px;
+    align-content: center;
+}
+
+.item{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    width:300px;
+    height: 200px;
+    background: goldenrod;
+    padding:40px;
+}
+.heading{
+    color:firebrick;
+    font-family: "Cambria", cursive;
+}
+.description{
+    color:blue;
+    font-family: "DejaVu Sans Condensed", sans-serif;
+}
