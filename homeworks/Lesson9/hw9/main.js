@@ -66,7 +66,7 @@ document.body.appendChild(coursesDiv);
         const cour=document.createElement('div');
         cour.classList.add('item');
 
-        const courseTitle=document.createElement('h1');
+        const courseTitle=document.createElement('h2');
         courseTitle.innerText=course.title;
         courseTitle.classList.add('heading');
 
@@ -78,4 +78,116 @@ document.body.appendChild(coursesDiv);
         courses.appendChild(cour)
     }
     document.body.appendChild(courses);
+}
+// task 9-5 //
+{
+    let coursesArray = [
+        {
+            title: 'JavaScript Complex',
+            monthDuration: 5,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+        },
+        {
+            title: 'Java Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'java core',
+                'java advanced']
+        },
+        {
+            title: 'Python Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'python core',
+                'python advanced']
+        },
+        {
+            title: 'QA Complex',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+        },
+        {
+            title: 'FullStack',
+            monthDuration: 7,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'react',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'node.js',
+                'python',
+                'java']
+        },
+        {
+            title: 'Frontend',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+        }
+    ];
+    const coursesInfoDiv=document.createElement('div');
+   let  coursesInfo=(array,objeckt)=>{
+        for(let course of array){
+            const courseTitle=document.createElement('div');
+            courseTitle.innerHTML=`<h1>${course.title}</h1>`;
+
+            const courseDuration=document.createElement('div');
+            courseDuration.innerHTML=`<p>${course.monthDuration}</p>`;
+
+            const courseHourDuration=document.createElement('div');
+            courseHourDuration.innerHTML=`<p>${course.hourDuration}</p>`;
+            const modulesDiv=document.createElement('div');
+            const modulsList=document.createElement('ul');
+
+            for(let key in course){
+                if(Array.isArray(course[key])){
+                    for(let item of course[key]){
+
+                            if (item !== 'html' && item !== 'css' && item !== 'js') {
+                                const modulsLi = document.createElement('li');
+                                modulsLi.innerText = item;
+                                modulsList.appendChild(modulsLi);
+                                modulesDiv.appendChild(modulsList);
+                            } else {
+                            const modulesItemDiv = document.createElement('div');
+                            modulesItemDiv.innerText = item;
+                            modulesDiv.appendChild(modulesItemDiv);
+                        }
+                    }
+                }
+            }
+            const courseDiv=document.createElement('div');
+            courseDiv.append(courseTitle,courseDuration,courseHourDuration,modulesDiv)
+            objeckt.appendChild(courseDiv);
+        }
+}
+    document.body.appendChild(coursesInfoDiv);
+coursesInfo(coursesArray,coursesInfoDiv);
+
+
 }
