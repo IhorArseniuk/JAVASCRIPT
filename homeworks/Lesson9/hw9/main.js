@@ -150,44 +150,50 @@ document.body.appendChild(coursesDiv);
             modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
         }
     ];
-    const coursesInfoDiv=document.createElement('div');
+    const coursesDiv=document.createElement('div');
+    coursesDiv.className = 'courses-box';
    let  coursesInfo=(array,objeckt)=>{
         for(let course of array){
             const courseTitle=document.createElement('div');
             courseTitle.innerHTML=`<h1>${course.title}</h1>`;
+            courseTitle.className='course-title';
 
             const courseDuration=document.createElement('div');
-            courseDuration.innerHTML=`<p>${course.monthDuration}</p>`;
+            courseDuration.innerHTML=`<p class="month-duration">${course.monthDuration}</p>`;
 
             const courseHourDuration=document.createElement('div');
             courseHourDuration.innerHTML=`<p>${course.hourDuration}</p>`;
             const modulesDiv=document.createElement('div');
+            modulesDiv.className = 'modules-container';
             const modulsList=document.createElement('ul');
-
+            modulsList.className='course-ul';
             for(let key in course){
                 if(Array.isArray(course[key])){
                     for(let item of course[key]){
-
                             if (item !== 'html' && item !== 'css' && item !== 'js') {
                                 const modulsLi = document.createElement('li');
+                                modulsLi.className='modules-li';
                                 modulsLi.innerText = item;
                                 modulsList.appendChild(modulsLi);
                                 modulesDiv.appendChild(modulsList);
                             } else {
                             const modulesItemDiv = document.createElement('div');
+                            modulesItemDiv.className='modules-item-div';
                             modulesItemDiv.innerText = item;
                             modulesDiv.appendChild(modulesItemDiv);
                         }
                     }
                 }
             }
+            const courseHourAndMonthDiv = document.createElement('div');
+            courseHourAndMonthDiv.append(courseDuration,courseHourDuration);
+            courseHourAndMonthDiv.className='course-month-hour-duration';
             const courseDiv=document.createElement('div');
-            courseDiv.append(courseTitle,courseDuration,courseHourDuration,modulesDiv)
+            courseDiv.className='course-info'
+            courseDiv.append(courseTitle,courseHourAndMonthDiv,modulesDiv)
             objeckt.appendChild(courseDiv);
         }
 }
-    document.body.appendChild(coursesInfoDiv);
-coursesInfo(coursesArray,coursesInfoDiv);
-
-
+    document.body.appendChild(coursesDiv);
+coursesInfo(coursesArray,coursesDiv);
 }
