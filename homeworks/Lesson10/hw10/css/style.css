@@ -1,0 +1,14 @@
+#text {
+    background-color:red;
+    width: 300px;
+    height: 200px;
+}
+#age-form{
+    margin-top:100px;
+}
+#age-butn{
+    border:1px solid gold;
+}
+#user-form{
+    margin-top:50px;
+}
