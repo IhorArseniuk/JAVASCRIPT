@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/rest.css">
-<link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/rest.css">
+<link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 <div id="text">Hail to the King</div>
@@ -16,13 +16,24 @@
     <input type="number" name="age" id="age-input" placeholder="Enter your age">
     <button id="age-butn">SEND</button>
 </form>
-<form name="userForm">
+<form name="userForm" id="user-form">
     <input type="text" name="name" placeholder="Enter your name">
     <input type="text" name="surname" placeholder="Enter your surname">
     <input type="number" name="age" placeholder="Enter your age">
     <input type="submit" name="iputSubmit" value="Submit" >
 </form>
 <div id="numberdiv">23</div>
-<script src="main.js"></script>
+<form name="weightConvert" id="weight-form">
+    <input type="number" name="weight" placeholder="Kg">
+    <div id="pounds"></div>
+</form>
+<form name="formTable" id="form-table">
+    <input type="number" name="trCount" placeholder="Enter row count">
+    <input type="number" name="lineCount" placeholder="Enter column count">
+    <input type="text" name="content" placeholder="Enter content">
+    <button>DO</button>
+</form>
+<table id="table"></table>
+<script src="../js/main.js"></script>
 </body>
 </html>  
