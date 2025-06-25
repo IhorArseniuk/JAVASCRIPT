@@ -123,12 +123,28 @@ let formConvertator=document.forms.weightConvert
 }
 // task 10-9 #bq1zkx7WP //
 {
-   let hrivna=+localStorage.getItem('hrivna')
-    hrivna+=10
-    function fo(){localStorage.setItem('hrivna',hrivna)}
+  /* let hrivna=+localStorage.getItem('hrivna')
+    function fo(){  hrivna+=10;
+       localStorage.setItem('hrivna',hrivna)}
     let div=document.getElementById('hrochi');
     div.innerText=100+hrivna+'грн'
-    setInterval(fo,10000)
+    setTimeout(fo,10000)*/
+    let baseCount=100
+    let timer= Date.now()
+
+     let lastReload= +localStorage.getItem('lastReload')||0;
+    let hrochi=+localStorage.getItem('hrochi')||0;
+     if(lastReload===0){
+         localStorage.setItem('lastReload',timer)
+     }
+    else if(timer-lastReload>=10000){
+          hrochi+=10;
+          localStorage.setItem('hrochi',hrochi);
+          localStorage.setItem('lastReload',timer);
+      }
+
+    let baseValue= document.getElementById('hrochi').innerText=baseCount+hrochi+'грн';
+
 }
 // task 10-10 #NKB0tgWIK1G //
 {
@@ -149,9 +165,6 @@ let formConvertator=document.forms.weightConvert
             const user={}
             user.name = stringCreator(name);
             user.surname = stringCreator(surname);
-         /*   let set =new Set
-            set.add(Math.floor(Math.random()*1000))
-            user.id=set*/
             user.id=Math.floor(Math.random()*100+1);
             result.push(user)
         }return result ;}
